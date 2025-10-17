@@ -1,0 +1,71 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Pain & Infection Relief",
+    description:
+      "The fastest way to treat severe, throbbing toothaches, dental abscesses, and control potentially serious oral infections.",
+    icon: "bx:bxs-zap",
+  },
+  {
+    title: "Dental Fillings for Cavities",
+    description:
+      "Emergency restoration for painful, deep cavities or the repair and replacement of broken, lost, or damaged fillings.",
+    icon: "bx:bxs-band-aid",
+  },
+  {
+    title: "Tooth Extractions",
+    description:
+      "Safe and gentle removal of severely fractured, decayed, or damaged teeth that cannot be saved by other restorative treatments.",
+    icon: "bx:cut",
+  },
+  {
+    title: "Root Canal Therapy",
+    description:
+      "Expert treatment to immediately relieve pain and save an infected or severely damaged tooth from needing a complete extraction.",
+    icon: "bx:bxs-heart-circle",
+  },
+  {
+    title: "Trauma Dentistry",
+    description:
+      "Immediate, critical care for injuries such as a knocked-out tooth, cracked or chipped teeth, and soft tissue or jaw trauma.",
+    icon: "bx:bxs-first-aid",
+  },
+  {
+    title: "Restorative & Cosmetic Repair",
+    description:
+      "Emergency repair and replacement for loose crowns, broken bridges, chipped veneers, and other treatments to restore function and appearance.",
+    icon: "bx:crown",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-3xl lg:tracking-tight text-cyan-500">
+    Our Emergency Dental Services
+  </h2>
+  <p class="text-base mt-4 text-gray-900">
+    When dental pain strikes or an injury occurs, you need immediate care. Dr.
+    Steven Byers and his experienced team proudly offer comprehensive emergency
+    dental services, including weekends and holidays, to patients across San
+    Diego County, including Kensington, North Park, and Normal Heights. We are
+    ready to successfully treat any type of dental emergency quickly and with
+    the least amount of discomfort.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6">
+  {
+    features.map((item) => (
+      <div class="bg-gray-50 border-2 border-gray-100 rounded-lg p-6 shadow hover:shadow-xl transition text-center">
+        <div class="flex justify-center mb-4">
+          <Icon class="text-cyan-500 w-16 h-16" name={item.icon} />
+        </div>
+        <h3 class="font-semibold text-xl text-gray-900 mb-3">{item.title}</h3>
+        <p class="text-gray-900 text-sm leading-relaxed">{item.description}</p>
+      </div>
+    ))
+  }
+</div>

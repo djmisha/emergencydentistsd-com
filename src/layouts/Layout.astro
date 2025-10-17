@@ -1,0 +1,164 @@
+---
+import { SEO } from "astro-seo";
+import Footer from "@/components/footer.astro";
+import Navbar from "@/components/navbar/navbar.astro";
+import "@fontsource-variable/inter/index.css";
+import "@fontsource-variable/bricolage-grotesque";
+import "../styles/global.css";
+
+export interface Props {
+  title: string;
+  description?: string;
+  metaTitle?: string;
+  noindex?: boolean;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const resolvedImageWithDomain = new URL(
+  "/opengraph.jpg",
+  Astro.site
+).toString();
+
+const { title, description, metaTitle, noindex } = Astro.props;
+
+const makeTitle = metaTitle
+  ? metaTitle
+  : title
+    ? title + " | " + "Dr. Byers DDS"
+    : "Dr. Byers DDS - 24/7 Emergency Dentist San Diego";
+
+const makeDescription = description
+  ? description
+  : "Expert emergency and cosmetic dental care in San Diego. Dr. Byers DDS serves Kensington, North Park, and Normal Heights with 24/7 emergency services.";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
+    <SEO
+      title={makeTitle}
+      description={makeDescription}
+      canonical={canonicalURL}
+      noindex={noindex}
+      twitter={{
+        creator: "@DrByersDDS",
+        site: "@DrByersDDS",
+        card: "summary_large_image",
+      }}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: makeTitle,
+          image: resolvedImageWithDomain,
+        },
+        image: {
+          alt: "Dr. Byers DDS - Emergency Dentist San Diego",
+        },
+      }}
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Dr. Steven J. Byers DDS",
+        "image": "https://emergencydentistsd.com/opengraph.jpg",
+        "@id": "https://emergencydentistsd.com",
+        "url": "https://emergencydentistsd.com",
+        "telephone": "+16192827060",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "San Diego",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "San Diego"
+          },
+          {
+            "@type": "Neighborhood",
+            "name": "Kensington"
+          },
+          {
+            "@type": "Neighborhood",
+            "name": "North Park"
+          },
+          {
+            "@type": "Neighborhood",
+            "name": "Normal Heights"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Dental Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "24/7 Emergency Dental Services"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cosmetic Dentistry"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Dental Implants"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Porcelain Veneers"
+              }
+            }
+          ]
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-blue-50">
+    <Navbar />
+    <slot />
+    <Footer />
+    <style is:global>
+      /* Improve Page speed */
+      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+      img {
+        content-visibility: auto;
+      }
+    </style>
+  </body>
+</html>

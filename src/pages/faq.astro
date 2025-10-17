@@ -1,0 +1,334 @@
+---
+import Container from "@/components/container.astro";
+import Layout from "@/layouts/Layout.astro";
+import Sectionhead from "@/components/sectionhead.astro";
+import Link from "@/components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+
+const pageTitle = "Frequently Asked Questions";
+const metaTitle = "Urgent Answers: FAQ for San Diego Dental Emergencies & Care";
+const metaDescription =
+  "Find answers to common questions about dental emergencies, payment policies ($850 deposit), insurance coverage, and general oral health in San Diego.";
+---
+
+<Layout title={pageTitle} metaTitle={metaTitle} description={metaDescription}>
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How do I know if I need an emergency appointment?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "If you are experiencing severe, persistent pain that cannot be managed; if you have uncontrollable bleeding; if there is significant swelling in the mouth or jaw; or if you have suffered trauma resulting in a knocked-out, fractured, or lost tooth/restoration. Immediate contact is vital to prevent severe complications, such as spreading infection.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is the fastest way to get toothache relief before my appointment?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The most effective immediate action is to rinse your mouth thoroughly with warm water to clear the area. Gently use dental floss to ensure no food debris is trapped between teeth. Avoid placing aspirin directly on the gums, as this can cause tissue damage. Proper professional diagnosis from a dentist is the surest way to find lasting toothache relief.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What should I do with a knocked-out tooth?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "If the tooth is permanent, find it and handle it only by the crown (the white visible part). If dirty, lick it clean or rinse gently, then attempt to re-insert it into the socket, holding it in place by biting down gently on gauze or a handkerchief. If re-insertion is impossible, store the tooth in milk or saliva and contact the office immediately.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Are emergency appointments available 24/7?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, Dr. Byers offers 24-hour emergency services, including availability on nights, weekends, and holidays. However, these services are strictly By Appointment Only. Patients must call (619) 282-7060 to schedule immediate access to care.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Why is there a mandatory prepaid deposit for new emergency patients?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The required $850.00 deposit secures your immediate, unscheduled access to expert 24-hour care, ensuring that the necessary staff and resources are available to prioritize your urgent needs without administrative delay. This deposit is fully applied toward your total bill. Zero-interest financing is available for the remaining balance.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Which insurance plans do you accept?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We accept many major PPO plans; however, the practice is unable to accept Medi-Cal or Medicare. New patients should contact the office directly for verification of their specific insurance coverage.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is the benefit of your In-House Lab?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The In-House Lab provides superior control over the fabrication process for customized restorations like crowns, veneers, and fixed bridges. This resource allows for faster turnaround times and immediate customization, ensuring that the final result is perfectly matched and fitted, expediting treatment completion for the patient.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How often should I have a dental exam and cleaning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "For most patients, an exam and cleaning every six months is recommended, but the frequency depends entirely on individual dental health conditions, which should be discussed with the dentist during your visit.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How can I improve my smile?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Smile improvement options range widely depending on individual needs. Dr. Byers can discuss aesthetic improvements ranging from professional teeth whitening and Invisalign to porcelain veneers and dental implants during a scheduled consultation.",
+          },
+        },
+      ],
+    })}
+  />
+
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title"
+        >Urgent Answers: Frequently Asked Questions</Fragment
+      >
+      <Fragment slot="desc"> For San Diego Dental Patients </Fragment>
+    </Sectionhead>
+
+    <div class="mx-auto max-w-4xl mt-16">
+      <!-- Emergency Treatment and First Aid -->
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">
+        Emergency Treatment and First Aid
+      </h2>
+
+      <div class="space-y-8 mb-16">
+        <div class="border-b border-gray-100 pb-8">
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">
+            How do I know if I need an emergency appointment?
+          </h3>
+          <p class="text-gray-900">
+            If you are experiencing severe, persistent pain that cannot be
+            managed; if you have uncontrollable bleeding; if there is
+            significant swelling in the mouth or jaw; or if you have suffered
+            trauma resulting in a knocked-out, fractured, or lost
+            tooth/restoration. Immediate contact is vital to prevent severe
+            complications, such as spreading infection.
+          </p>
+        </div>
+
+        <div class="border-b border-gray-100 pb-8">
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">
+            What is the fastest way to get toothache relief before my
+            appointment?
+          </h3>
+          <p class="text-gray-900">
+            The most effective immediate action is to rinse your mouth
+            thoroughly with warm water to clear the area. Gently use dental
+            floss to ensure no food debris is trapped between teeth. Avoid
+            placing aspirin directly on the gums, as this can cause tissue
+            damage. Proper professional diagnosis from a dentist is the surest
+            way to find lasting toothache relief.
+          </p>
+        </div>
+
+        <div class="border-b border-gray-100 pb-8">
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">
+            What should I do with a knocked-out tooth?
+          </h3>
+          <p class="text-gray-900">
+            If the tooth is permanent, find it and handle it only by the crown
+            (the white visible part). If dirty, lick it clean or rinse gently,
+            then attempt to re-insert it into the socket, holding it in place by
+            biting down gently on gauze or a handkerchief. If re-insertion is
+            impossible, store the tooth in milk or saliva and contact the office
+            immediately.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto my-8">
+          <table class="min-w-full bg-white border border-gray-200">
+            <thead class="bg-gray-50">
+              <tr>
+                <th
+                  class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider border-b"
+                  >Emergency Scenario</th
+                >
+                <th
+                  class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider border-b"
+                  >Immediate First Aid Instructions</th
+                >
+                <th
+                  class="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider border-b"
+                  >Reasoning for Urgency</th
+                >
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="px-6 py-4 text-sm text-gray-900"
+                  >Knocked-Out Tooth (Adult)</td
+                >
+                <td class="px-6 py-4 text-sm text-gray-900"
+                  >Keep moist (saliva/milk). Try to reinsert into socket,
+                  holding by the crown.</td
+                >
+                <td class="px-6 py-4 text-sm text-gray-900"
+                  >Time is critical; increases the chance of successful
+                  reattachment.</td
+                >
+              </tr>
+              <tr>
+                <td class="px-6 py-4 text-sm text-gray-900">Severe Toothache</td
+                >
+                <td class="px-6 py-4 text-sm text-gray-900"
+                  >Rinse with warm water. Floss gently. Do not self-medicate
+                  topically.</td
+                >
+                <td class="px-6 py-4 text-sm text-gray-900"
+                  >Pain signals infection (abscess) or decay requiring
+                  professional intervention.</td
+                >
+              </tr>
+              <tr>
+                <td class="px-6 py-4 text-sm text-gray-900"
+                  >Lost Filling or Crown</td
+                >
+                <td class="px-6 py-4 text-sm text-gray-900"
+                  >Preserve the piece. Avoid chewing. Protect exposed area with
+                  dental wax.</td
+                >
+                <td class="px-6 py-4 text-sm text-gray-900"
+                  >Prevents infection and further structural damage to the
+                  sensitive core of the tooth.</td
+                >
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Financial, Insurance, and Appointment Policies -->
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">
+        Financial, Insurance, and Appointment Policies
+      </h2>
+
+      <div class="space-y-8 mb-16">
+        <div class="border-b border-gray-100 pb-8">
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">
+            Are emergency appointments available 24/7?
+          </h3>
+          <p class="text-gray-900">
+            Yes, Dr. Byers offers 24-hour emergency services, including
+            availability on nights, weekends, and holidays. However, these
+            services are strictly By Appointment Only. Patients must call (619)
+            282-7060 to schedule immediate access to care.
+          </p>
+        </div>
+
+        <div class="border-b border-gray-100 pb-8">
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">
+            Why is there a mandatory prepaid deposit for new emergency patients?
+          </h3>
+          <p class="text-gray-900">
+            The required $850.00 deposit secures your immediate, unscheduled
+            access to expert 24-hour care, ensuring that the necessary staff and
+            resources are available to prioritize your urgent needs without
+            administrative delay. This deposit is fully applied toward your
+            total bill. Zero-interest financing is available for the remaining
+            balance.
+          </p>
+        </div>
+
+        <div class="border-b border-gray-100 pb-8">
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">
+            Which insurance plans do you accept?
+          </h3>
+          <p class="text-gray-900">
+            We accept many major PPO plans; however, the practice is unable to
+            accept Medi-Cal or Medicare. New patients should contact the office
+            directly for verification of their specific insurance coverage.
+          </p>
+        </div>
+      </div>
+
+      <!-- General Care and Cosmetic Consultation -->
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">
+        General Care and Cosmetic Consultation
+      </h2>
+
+      <div class="space-y-8 mb-16">
+        <div class="border-b border-gray-100 pb-8">
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">
+            What is the benefit of your In-House Lab?
+          </h3>
+          <p class="text-gray-900">
+            The In-House Lab provides superior control over the fabrication
+            process for customized restorations like crowns, veneers, and fixed
+            bridges. This resource allows for faster turnaround times and
+            immediate customization, ensuring that the final result is perfectly
+            matched and fitted, expediting treatment completion for the patient.
+          </p>
+        </div>
+
+        <div class="border-b border-gray-100 pb-8">
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">
+            How often should I have a dental exam and cleaning?
+          </h3>
+          <p class="text-gray-900">
+            For most patients, an exam and cleaning every six months is
+            recommended, but the frequency depends entirely on individual dental
+            health conditions, which should be discussed with the dentist during
+            your visit.
+          </p>
+        </div>
+
+        <div class="pb-8">
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">
+            How can I improve my smile?
+          </h3>
+          <p class="text-gray-900">
+            Smile improvement options range widely depending on individual
+            needs. Dr. Byers can discuss aesthetic improvements ranging from
+            professional teeth whitening and Invisalign to porcelain veneers and
+            dental implants during a scheduled consultation.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Page CTA Section -->
+    <div
+      class="bg-gray-100 border-2 border-gray-300 p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center shadow-xl">
+      <h2 class="text-gray-900 text-4xl md:text-5xl tracking-tight">
+        Still Have Questions?
+      </h2>
+      <p class="text-gray-900 mt-4 text-lg md:text-xl">
+        If you don't see your question answered here or need immediate emergency
+        assistance, our team is available 24/7 to help. Call or text us now.
+      </p>
+      <div class="flex flex-col sm:flex-row mt-5 gap-3">
+        <Link
+          href="tel:6192827060"
+          style="primary"
+          class="flex gap-2 items-center justify-center">
+          <Icon class="w-5 h-5" name="bx:bxs-phone-call" />
+          Call (619) 282-7060
+        </Link>
+        <Link
+          href="sms:6192827060?&body=I%20have%20a%20question%20about%20dental%20services"
+          style="outline"
+          class="flex gap-2 items-center justify-center">
+          <Icon class="w-5 h-5" name="bx:bxs-message" />
+          Text Us Your Question
+        </Link>
+      </div>
+    </div>
+  </Container>
+</Layout>

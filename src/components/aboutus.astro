@@ -1,0 +1,29 @@
+---
+import Container from "./container.astro";
+import office1 from "../assets/office-1.jpg";
+import office2 from "../assets/office-2.jpg";
+---
+
+<Container>
+  <div class="mt-24">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl text-cyan-500 mb-4">About Us</h2>
+      <p class="text-gray-900 max-w-3xl mx-auto text-lg">
+        Dr. Steven J. Byers has been serving the San Diego area for over 25 years, providing personalized dental care from our Kensington practice. Our mission is to deliver exceptional emergency and family dentistry in a comfortable environment, ensuring each patient receives the attention they deserve when they need it most.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <img 
+        src={office1.src} 
+        alt="Modern dental office interior" 
+        class="rounded-lg shadow-lg w-full h-64 object-cover"
+      />
+      <img 
+        src={office2.src} 
+        alt="Professional dental treatment room" 
+        class="rounded-lg shadow-lg w-full h-64 object-cover"
+      />
+    </div>
+  </div>
+</Container>

@@ -1,0 +1,55 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "@/assets/hero.jpg";
+import Link from "@/components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-2 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 flex justify-center items-center">
+    <div class="w-4/5">
+      <Picture
+        src={heroImage}
+        alt="Astronaut in the air"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 800px) 100vw, 620px"
+        loading="eager"
+        format="avif"
+        class="rounded-lg shadow-xl bg-white object-cover object-center"
+      />
+    </div>
+  </div>
+  <div>
+    <h1
+      class="text-3xl md:text-4xl lg:tracking-tight xl:tracking-tighter text-gray-900">
+      Emergency Dentist <br />Serving San Diego
+    </h1>
+    <p class="text-lg mt-4 text-gray-900 max-w-xl">
+      Get immediate pain relief and fast treatment for any dental emergency—day,
+      night, weekends, or holidays. Get in touch now for an instant connection
+      to our experienced dental trauma team.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link
+        href="tel:6192827060"
+        class="flex gap-1 items-center justify-center"
+        rel="noopener">
+        <Icon class="text-orange-500 w-5 h-5" name="bx:bxs-phone-call" />
+        Call Now
+      </Link>
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="sms:6192827060?&body=I'm%20reaching%20out%20regarding%20Emergency%20Dental%20services"
+        class="flex gap-1 items-center justify-center">
+        <Icon class="text-cyan-500 w-4 h-4" name="bx:bxs-message" />
+        Text Us
+      </Link>
+    </div>
+  </div>
+</main>
+<div class="pb-12 flex justify-center">
+  <div class="w-1/2 h-px bg-gray-300"></div>
+</div>

@@ -1,0 +1,122 @@
+---
+import Container from "@/components/container.astro";
+import Link from "@/components/ui/link.astro";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Icon } from "astro-icon/components";
+
+const menuitems = [
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "Emergency",
+    path: "/emergency",
+  },
+  {
+    title: "Cosmetic",
+    path: "/cosmetic",
+  },
+  {
+    title: "About Us",
+    path: "/about",
+  },
+  {
+    title: "FAQ",
+    path: "/faq",
+  },
+];
+---
+
+<Container>
+  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+    <Astronav>
+      <div class="flex w-full lg:w-auto items-center justify-between">
+        <a href="/" class="text-lg">
+          <span class="text-cyan-500 font-bold">+</span>
+          <span class="font-bold text-gray-900">Emergency</span>
+          <span class="text-cyan-500"> Dentist</span>
+        </a>
+        <div class="block lg:hidden">
+          <MenuIcon class="w-8 h-8 text-gray-900" />
+        </div>
+      </div>
+      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+        <ul class="flex flex-col lg:flex-row lg:gap-3">
+          {
+            menuitems.map((item, index) => (
+              <li>
+                <a
+                  href={item.path}
+                  class="flex lg:px-3 py-2 text-lg items-center text-gray-900 hover:text-cyan-500  border-2 border-white hover:border-cyan-500 rounded">
+                  <span>{item.title}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <div class="lg:hidden flex items-center mt-3 gap-3">
+          <Link
+            href="tel:6192827060"
+            style="primary"
+            block
+            size="md"
+            class="flex gap-1 items-center justify-center">
+            <Icon class="w-4 h-4" name="bx:bxs-phone-call" />
+            Call
+          </Link>
+          <Link
+            href="sms:6192827060?&body=I'm%20reaching%20out%20regarding%20Emergency%20Dental%20services"
+            style="outline"
+            block
+            size="md"
+            class="flex gap-1 items-center justify-center">
+            <Icon class="w-4 h-4" name="bx:bxs-message" />
+            Text
+          </Link>
+          <Link
+            href="https://maps.app.goo.gl/sRuYnFLpM1tyNUUi9"
+            target="_blank"
+            rel="noopener"
+            size="md"
+            block
+            style="muted"
+            class="flex gap-1 items-center justify-center">
+            <Icon class="w-4 h-4" name="bx:bxs-map" />
+            Map
+          </Link>
+        </div>
+      </MenuItems>
+    </Astronav>
+    <div>
+      <div class="hidden lg:flex items-center gap-3">
+        <Link
+          href="https://maps.app.goo.gl/sRuYnFLpM1tyNUUi9"
+          target="_blank"
+          rel="noopener"
+          style="muted"
+          size="md"
+          class="flex gap-1 items-center justify-center">
+          <Icon class="w-4 h-4" name="bx:bxs-map" />
+          Map
+        </Link>
+        <Link
+          href="tel:6192827060"
+          style="primary"
+          size="md"
+          class="flex gap-1 items-center justify-center">
+          <Icon class="w-4 h-4" name="bx:bxs-phone-call" />
+          Call
+        </Link>
+        <Link
+          href="sms:6192827060?&body=I'm%20reaching%20out%20regarding%20Emergency%20Dental%20services"
+          style="outline"
+          size="md"
+          class="flex gap-1 items-center justify-center">
+          <Icon class="w-4 h-4" name="bx:bxs-message" />
+          Text
+        </Link>
+      </div>
+    </div>
+  </header>
+</Container>

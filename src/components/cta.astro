@@ -1,0 +1,31 @@
+---
+import Link from "./ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<div
+  class="bg-gray-100 border-2 border-gray-300 p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center shadow-xl">
+  <h2 class="text-gray-900 text-4xl md:text-5xl tracking-tight">
+    Do you have a Dental Emergency?
+  </h2>
+  <p class="text-gray-900 mt-4 text-lg md:text-xl">
+    Get immediate pain relief and fast treatment for any dental emergency. Call
+    or text us now for instant connection to our experienced dental team.
+  </p>
+  <div class="flex flex-col sm:flex-row mt-5 gap-3">
+    <Link
+      href="tel:6192827060"
+      style="primary"
+      class="flex gap-2 items-center justify-center">
+      <Icon class="w-5 h-5" name="bx:bxs-phone-call" />
+      Call Now (619) 282-7060
+    </Link>
+    <Link
+      href="sms:6192827060?&body=I'm%20reaching%20out%20regarding%20Emergency%20Dental%20services"
+      style="outline"
+      class="flex gap-2 items-center justify-center">
+      <Icon class="w-5 h-5" name="bx:bxs-message" />
+      Text Us to Get Help
+    </Link>
+  </div>
+</div>

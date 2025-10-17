@@ -1,0 +1,203 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const testimonials = [
+  {
+    name: "Renee Thompson",
+    platform: "Google Review",
+    gender: "female",
+    text: "Saw Dr. Beyer as an emergency (own doctor on vacation) to repair a broken tooth. Every member of his team was professional and so friendly.",
+  },
+  {
+    name: "Marlon Robinson",
+    platform: "Google Review",
+    gender: "male",
+    text: "Very charming dentistry with a crew that makes you feel very welcoming from day one. They really care about their patients and deal you very honestly. Happy I found this place.",
+  },
+  {
+    name: "Eric Larson",
+    platform: "Google Review",
+    gender: "male",
+    text: "Dr. Byers has been my dentist of choice for some 20+ years now. Service has always been excellent. Today, as part of an exam, they did a 3D x-ray of my mouth using a fancy new machine.",
+  },
+  {
+    name: "Albert Cheung",
+    platform: "Google Review",
+    gender: "male",
+    text: "The staff were friendly, courteous, and very professional. Dr Byers accommodated my emergency visit right away to re-attach a dislodged crown while I was on vacation in San Diego.",
+  },
+];
+---
+
+<div class="mt-24">
+  <h2 class="text-center text-3xl text-cyan-500 mb-4">What Our Patients Say</h2>
+  <p class="text-center text-gray-900 mb-10">
+    Real reviews from real patients in San Diego County
+  </p>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+    {
+      testimonials.map((testimonial) => (
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-6 shadow hover:shadow-xl transition md:even:mt-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="bg-cyan-500 rounded-full p-3 w-12 h-12 flex items-center justify-center">
+              <Icon class="text-white w-6 h-6" name="bx:bxs-user" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900">{testimonial.name}</h3>
+              <p class="text-sm text-cyan-500">{testimonial.platform}</p>
+            </div>
+          </div>
+          <p class="text-gray-900 text-sm leading-relaxed italic">
+            "{testimonial.text}"
+          </p>
+          <div class="flex gap-1 mt-4 text-orange-600">
+            <Icon class="w-4 h-4" name="bx:bxs-star" />
+            <Icon class="w-4 h-4" name="bx:bxs-star" />
+            <Icon class="w-4 h-4" name="bx:bxs-star" />
+            <Icon class="w-4 h-4" name="bx:bxs-star" />
+            <Icon class="w-4 h-4" name="bx:bxs-star" />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <!-- Payment Terms Section -->
+  <!-- <div class="mt-20 max-w-6xl mx-auto">
+    <div class="text-center mb-10">
+      <h3 class="text-3xl text-gray-900 mb-2">Payment & Policies</h3>
+      <p class="text-gray-900">
+        Important information about emergency dental services
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white border-2 border-orange-600 rounded-lg p-6 shadow-lg">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="bg-orange-600 rounded-full p-3">
+            <Icon class="w-6 h-6 text-white" name="bx:bxs-user-plus" />
+          </div>
+          <h4 class="text-xl text-gray-900">New Patients</h4>
+        </div>
+        <div class="space-y-3 text-gray-900">
+          <div class="bg-gray-100 rounded-lg p-4">
+            <p class="text-sm text-gray-900 mb-1">Required Deposit</p>
+            <p class="text-3xl font-bold text-orange-600">$850.00</p>
+            <p class="text-xs text-gray-900 mt-1">Cash or credit card</p>
+          </div>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2">
+              <Icon
+                class="w-4 h-4 text-orange-600 mt-0.5 flex-shrink-0"
+                name="bx:bx-check"
+              />
+              <span>Deposit applied to your treatment</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon
+                class="w-4 h-4 text-orange-600 mt-0.5 flex-shrink-0"
+                name="bx:bx-check"
+              />
+              <span>Remaining balance can be financed</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon
+                class="w-4 h-4 text-orange-600 mt-0.5 flex-shrink-0"
+                name="bx:bx-check"
+              />
+              <span><strong>Zero interest</strong> financing available</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white border-2 border-cyan-500 rounded-lg p-6 shadow-lg">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="bg-cyan-500 rounded-full p-3">
+            <Icon class="w-6 h-6 text-white" name="bx:bxs-user-check" />
+          </div>
+          <h4 class="text-xl text-gray-900">Existing Patients</h4>
+        </div>
+        <div class="space-y-3 text-gray-900">
+          <div class="bg-gray-100 rounded-lg p-4">
+            <p class="text-sm text-gray-900 mb-1">Pricing</p>
+            <p class="text-2xl font-bold text-cyan-500">Standard Rates</p>
+            <p class="text-xs text-gray-900 mt-1">
+              Normal fee schedule applies
+            </p>
+          </div>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2">
+              <Icon
+                class="w-4 h-4 text-cyan-500 mt-0.5 flex-shrink-0"
+                name="bx:bx-check"
+              />
+              <span>No deposit required</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon
+                class="w-4 h-4 text-cyan-500 mt-0.5 flex-shrink-0"
+                name="bx:bx-check"
+              />
+              <span>Regular payment options available</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <Icon
+                class="w-4 h-4 text-cyan-500 mt-0.5 flex-shrink-0"
+                name="bx:bx-check"
+              />
+              <span>Account in good standing</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+
+  <!-- <div class="mt-6 grid md:grid-cols-2 gap-4">
+    <div class="bg-red-50 border-l-4 border-red-600 rounded-lg p-4">
+      <div class="flex items-start gap-3">
+        <Icon
+          class="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0"
+          name="bx:bxs-info-circle"
+        />
+        <div class="text-sm">
+          <p class="font-semibold text-gray-900 mb-1">Insurance Notice</p>
+          <p class="text-gray-900">
+            We do not accept Medi-Cal or Medicare at this time.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-red-50 border-l-4 border-red-600 rounded-lg p-4">
+      <div class="flex items-start gap-3">
+        <Icon
+          class="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0"
+          name="bx:bxs-calendar-check"
+        />
+        <div class="text-sm">
+          <p class="font-semibold text-gray-900 mb-1">Appointment Required</p>
+          <p class="text-gray-900">
+            24-hour emergency services available by appointment only.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- CTA -->
+  <!-- <div
+    class="mt-8 text-center bg-gradient-to-r from-cyan-500 to-orange-600 rounded-lg p-6 text-white">
+    <p class="text-lg mb-3">
+      Have questions about payment or need emergency care?
+    </p>
+    <a
+      href="tel:6192827060"
+      class="inline-flex items-center gap-2 bg-white text-gray-900 font-bold px-8 py-4 rounded-lg hover:shadow-xl transition">
+      <Icon class="w-5 h-5" name="bx:bxs-phone-call" />
+      Call (619) 282-7060
+    </a>
+  </div> -->
+</div>

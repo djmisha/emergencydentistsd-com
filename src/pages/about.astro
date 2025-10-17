@@ -1,0 +1,130 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Container from "@/components/container.astro";
+import Sectionhead from "@/components/sectionhead.astro";
+import Link from "@/components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+
+const pageTitle = "About";
+const metaTitle = "Meet Dr. Byers DDS: 25+ Years of Trusted San Diego Care";
+const metaDescription =
+  "Learn about Dr. Byers' 25+ years experience, credentials (ADA, ICOI), and patient-first philosophy serving Kensington and North Park.";
+---
+
+<Layout title={pageTitle} metaTitle={metaTitle} description={metaDescription}>
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Meet Dr. Steven J. Byers, DDS</Fragment>
+      <Fragment slot="desc"
+        >Your Trusted San Diego Dental Home for Over 25 Years</Fragment
+      >
+    </Sectionhead>
+
+    <div class="flex flex-col gap-6 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-900">
+        A Commitment to Exceptional, Family-Centric Care
+      </h2>
+      <p class="text-lg leading-relaxed text-gray-900">
+        Dr. Steven J. Byers DDS has been a fixture in the San Diego community
+        for over 25 years. The practice operates under a guiding philosophy of
+        treating patients "just like family", aiming to be the patients'
+        enduring "dental home" and having done so for over 33 years. Located in
+        Kensington, San Diego, Dr. Byers leads a patient-oriented dental
+        practice with an outstanding and dedicated team of professionals.
+      </p>
+
+      <h2 class="font-bold text-3xl text-gray-900 mt-12">
+        Dr. Byers' Credentials, Memberships, and Experience
+      </h2>
+      <p class="text-lg leading-relaxed text-gray-900">
+        Dr. Byers' professional career is marked by dedication to excellence
+        across general, emergency, and advanced cosmetic disciplines. He brings
+        extensive experience, having successfully served patients from
+        Kensington, Normal Heights, North Park, and across San Diego County.
+      </p>
+
+      <h3 class="font-semibold text-2xl text-gray-900 mt-8">
+        Key Professional Memberships and Certifications
+      </h3>
+      <p class="text-lg leading-relaxed text-gray-900">
+        To ensure the highest quality of care, Dr. Byers maintains active
+        membership in several prestigious professional organizations:
+      </p>
+      <ul class="list-disc list-inside space-y-3 text-lg text-gray-900 ml-4">
+        <li><strong>Academy of General Dentistry (AGD)</strong></li>
+        <li><strong>American Dental Association (ADA)</strong></li>
+        <li>
+          <strong>International Congress of Oral Implantologists (ICOI)</strong>
+          – This membership specifically highlights his advanced technical skill
+          in surgical and restorative implant procedures, reinforcing the credibility
+          of the cosmetic offerings.
+        </li>
+      </ul>
+
+      <h2 class="font-bold text-3xl text-gray-900 mt-12">
+        Practice Philosophy: Meticulous Care Done with the Skill of a Jeweler
+      </h2>
+      <p class="text-lg leading-relaxed text-gray-900">
+        The practice culture is rooted in providing high-quality care with
+        efficiency and genuine concern. Patient reviews consistently emphasize
+        the professional and friendly nature of the staff, noting the dental
+        work is often completed "with the skill of a jeweler in a fast,
+        efficient way". The team is dedicated to getting patients out of dental
+        pain quickly and accommodating patient schedules.
+      </p>
+      <p class="text-lg leading-relaxed text-gray-900 mt-4">
+        A notable aspect of Dr. Byers' profile is his commitment to precision,
+        demonstrated not only clinically but also through his personal pursuits.
+        In addition to dentistry, Dr. Byers is an avid pilot, frequently
+        enjoying the views of San Diego from thousands of feet up when he is not
+        serving patients. The discipline, meticulous preparation, and adherence
+        to safety required for aviation are qualities that directly translate
+        into the precision and reliability essential for performing detailed
+        surgical and restorative dentistry. This unique element reinforces the
+        narrative of technical competence and trustworthiness, which is critical
+        for patients entrusting their long-term health and aesthetics to the
+        practice.
+      </p>
+
+      <h2 class="font-bold text-3xl text-gray-900 mt-12">
+        Serving the San Diego Community
+      </h2>
+      <p class="text-lg leading-relaxed text-gray-900">
+        Dr. Byers DDS is a leading provider of comprehensive dental services
+        focused on the communities of Kensington, Normal Heights, and North
+        Park, serving the broader San Diego County with prompt dental emergency
+        treatments.
+      </p>
+    </div>
+
+    <!-- About Page CTA Section -->
+    <div
+      class="bg-gray-100 border-2 border-gray-300 p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center shadow-xl">
+      <h2 class="text-gray-900 text-4xl md:text-5xl tracking-tight">
+        Ready to Experience the Dr. Byers DDS Difference?
+      </h2>
+      <p class="text-gray-900 mt-4 text-lg md:text-xl">
+        Whether you need emergency dental care or want to schedule a cosmetic
+        consultation, our dedicated team is here to provide exceptional,
+        family-centric care in Kensington.
+      </p>
+      <div class="flex flex-col sm:flex-row mt-5 gap-3">
+        <Link
+          href="tel:6192827060"
+          style="primary"
+          class="flex gap-2 items-center justify-center">
+          <Icon class="w-5 h-5" name="bx:bxs-phone-call" />
+          Call (619) 282-7060
+        </Link>
+        <Link
+          href="/contact"
+          style="outline"
+          class="flex gap-2 items-center justify-center">
+          <Icon class="w-5 h-5" name="bx:bxs-calendar" />
+          Schedule Your Visit
+        </Link>
+      </div>
+    </div>
+  </Container>
+</Layout>
